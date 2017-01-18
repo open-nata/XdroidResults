@@ -294,8 +294,7 @@ java.lang.ClassCastException: X.Ewl cannot be cast to X.2lq
 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
- ```
-
+```
 ```
 java.lang.IllegalStateException: Unhandled: a
 	at X.FXV.a(:2255141)
@@ -357,7 +356,7 @@ Caused by: java.lang.RuntimeException: setParameters failed
 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
- ```
+```
 
 * **necdroid**:1个Bug
 
@@ -525,7 +524,7 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
     	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
- ```
+```
 
 ```
  12-12 09:45:43.186 24826-24891/? E/ActivityManager: ANR in org.liberty.android.fantastischmemo (org.liberty.android.fantastischmemo/.downloader.DropboxLauncher)
@@ -612,8 +611,8 @@ java.lang.NumberFormatException: Invalid int: "herguless"
 
 * **com.fsck.k9**：4个Bugs
  
- ```
-  E/AndroidRuntime(14692): Process: com.fsck.k9, PID: 14692
+```
+    E/AndroidRuntime(14692): Process: com.fsck.k9, PID: 14692
     E/AndroidRuntime(14692): java.lang.NullPointerException: Attempt to read from field 'com.fsck.k9.activity.FolderInfoHolder com.fsck.k9.activity.MessageInfoHolder.folder' on a null object reference
     E/AndroidRuntime(14692):  at com.fsck.k9.activity.MessageList.onOpenMessage(MessageList.java:1170)
     E/AndroidRuntime(14692):  at com.fsck.k9.activity.MessageList.onItemClick(MessageList.java:672)
