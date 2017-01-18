@@ -1,9 +1,8 @@
 ## Welcome to Xdroid Pages
 
 该页展示的是Android自动化测试工具*Xdroid*与人工、*Monkey*大量实验的结果,如下是每种方式下发现的Bugs记录。
-### 结果总览
 
-### Xdroid：共计Bugs
+### Xdroid：共计25个Bugs
 *** 
 * **whatsapp**：1个Bug
 ```
@@ -583,7 +582,8 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
-* **com.fsck.k9**:4个Bugs
+* **com.fsck.k9**：4个Bugs
+ 
  ```
   E/AndroidRuntime(14692): Process: com.fsck.k9, PID: 14692
     E/AndroidRuntime(14692): java.lang.NullPointerException: Attempt to read from field 'com.fsck.k9.activity.FolderInfoHolder com.fsck.k9.activity.MessageInfoHolder.folder' on a null object reference
@@ -725,5 +725,264 @@ java.lang.NullPointerException: Attempt to invoke interface method 'int java.uti
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-### Monkey
+### Monkey：共计6个Bugs
 ***
+- Pinteest Crash
+```
+ java.lang.NullPointerException: Attempt to read from field 'int android.view.View.mPrivateFlags' on a null object reference
+	at android.view.ViewGroup.resetCancelNextUpFlag(ViewGroup.java:2225)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2170)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:2430)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2172)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:2430)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2172)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:2430)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2172)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:2430)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2172)
+	at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchTouchEvent(PhoneWindow.java:2314)
+	at com.android.internal.policy.impl.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1692)
+	at android.app.Activity.dispatchTouchEvent(Activity.java:2739)
+	at android.support.v7.view.n.dispatchTouchEvent(SourceFile:67)
+	at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchTouchEvent(PhoneWindow.java:2275)
+	at android.view.View.dispatchPointerEvent(View.java:8578)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:4021)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3887)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3578)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3635)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:5701)
+	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:5675)
+	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:5646)
+	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:5791)
+	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:185)
+	at android.os.MessageQueue.nativePollOnce(Native Method)
+	at android.os.MessageQueue.next(MessageQueue.java:143)
+	at android.os.Looper.loop(Looper.java:122)
+	at android.app.ActivityThread.main(ActivityThread.java:5221)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:372)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
+- Facebook ANR
+```
+E/ActivityManager( 8533): ANR in com.facebook.orca (com.facebook.orca/.auth.Star
+    tScreenActivity)
+    E/ActivityManager( 8533): PID: 22571
+    E/ActivityManager( 8533): Reason: Input dispatching timed out (Waiting because n
+    o window has focus but there is a focused application that may eventually add a
+    window when it finishes starting up.)
+```
+- Wechat ANR
+```
+E/ActivityManager( 8533): ANR in com.tencent.mm:tools (com.tencent.mm/.plugin.webview.ui.tools.WebViewUI)
+E/ActivityManager( 8533): PID: 4529
+E/ActivityManager( 8533): Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  Outbound queue length: 0.  Wait queue length: 1.)
+```
+- com.eleybourn.bookcatalogue
+```
+E/AndroidRuntime(27791): Process: com.eleybourn.bookcatalogue, PID: 27791
+E/AndroidRuntime(27791): java.lang.NullPointerException: Attempt to invoke interface method 'int java.util.List.size()' on a null object reference
+E/AndroidRuntime(27791): 	at android.widget.ArrayAdapter.getCount(ArrayAdapter.java:330)
+E/AndroidRuntime(27791): 	at android.widget.AutoCompleteTextView$PopupDataSetObserver$1.run(AutoCompleteTextView.java:1293)
+E/AndroidRuntime(27791): 	at android.os.Handler.handleCallback(Handler.java:739)
+E/AndroidRuntime(27791): 	at android.os.Handler.dispatchMessage(Handler.java:95)
+E/AndroidRuntime(27791): 	at android.os.Looper.loop(Looper.java:135)
+E/AndroidRuntime(27791): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime(27791): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime(27791): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime(27791): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+E/AndroidRuntime(27791): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+E/AndroidRuntime(27791): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
+* K9Mail
+```
+E/AndroidRuntime( 2653): Process: com.fsck.k9, PID: 2653
+E/AndroidRuntime( 2653): java.lang.NullPointerException: Attempt to read from field 'com.fsck.k9.activity.FolderInfoHolder com.fsck.k9.activity.MessageInfoHolder.folder' on a null object reference
+E/AndroidRuntime( 2653): 	at com.fsck.k9.activity.MessageList.onOpenMessage(MessageList.java:1170)
+E/AndroidRuntime( 2653): 	at com.fsck.k9.activity.MessageList.onItemClick(MessageList.java:672)
+E/AndroidRuntime( 2653): 	at android.widget.AdapterView.performItemClick(AdapterView.java:300)
+E/AndroidRuntime( 2653): 	at android.widget.AbsListView.performItemClick(AbsListView.java:1143)
+E/AndroidRuntime( 2653): 	at android.widget.AbsListView.onKeyUp(AbsListView.java:3185)
+E/AndroidRuntime( 2653): 	at android.widget.ListView.commonKey(ListView.java:2300)
+E/AndroidRuntime( 2653): 	at android.widget.ListView.onKeyUp(ListView.java:2155)
+E/AndroidRuntime( 2653): 	at android.view.KeyEvent.dispatch(KeyEvent.java:2633)
+E/AndroidRuntime( 2653): 	at android.view.View.dispatchKeyEvent(View.java:8338)
+E/AndroidRuntime( 2653): 	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1595)
+E/AndroidRuntime( 2653): 	at android.widget.ListView.dispatchKeyEvent(ListView.java:2130)
+E/AndroidRuntime( 2653): 	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+E/AndroidRuntime( 2653): 	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+E/AndroidRuntime( 2653): 	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+E/AndroidRuntime( 2653): 	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+E/AndroidRuntime( 2653): 	at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchKeyEvent(PhoneWindow.java:2306)
+E/AndroidRuntime( 2653): 	at com.android.internal.policy.impl.PhoneWindow.superDispatchKeyEvent(PhoneWindow.java:1682)
+E/AndroidRuntime( 2653): 	at android.app.Activity.dispatchKeyEvent(Activity.java:2699)
+E/AndroidRuntime( 2653): 	at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchKeyEvent(PhoneWindow.java:2221)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$ViewPostImeInputStage.processKeyEvent(ViewRootImpl.java:3918)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3880)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3578)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3635)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3611)
+E/AndroidRuntime( 2653): 	at android.view.ViewRootImpl$ImeInputStage.onFinishedInputEvent(ViewRootImpl.java:3772)
+E/AndroidRuntime( 2653): 	at android.view.inputmethod.InputMethodManager$PendingEvent.run(InputMethodManager.java:2208)
+E/AndroidRuntime( 2653): 	at android.view.inputmethod.InputMethodManager.invokeFinishedInputEventCallback(InputMethodManager.java:1849)
+E/AndroidRuntime( 2653): 	at android.view.inputmethod.InputMethodManager.finishedInputEvent(InputMethodManager.java:1840)
+E/AndroidRuntime( 2653): 	at android.view.inputmethod.InputMethodManager$ImeInputEventSender.onInputEventFinished(InputMethodManager.java:2185)
+E/AndroidRuntime( 2653): 	at android.view.InputEventSender.dispatchInputEventFinished(InputEventSender.java:141)
+E/AndroidRuntime( 2653): 	at android.os.MessageQueue.nativePollOnce(Native Method)
+E/AndroidRuntime( 2653): 	at android.os.MessageQueue.next(MessageQueue.java:143)
+E/AndroidRuntime( 2653): 	at android.os.Looper.loop(Looper.java:122)
+E/AndroidRuntime( 2653): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime( 2653): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime( 2653): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime( 2653): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+E/AndroidRuntime( 2653): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+E/AndroidRuntime( 2653): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
+* fantastischmemo
+```
+ E/AndroidRuntime(18875): Process: org.liberty.android.fantastischmemo, PID: 18875
+E/AndroidRuntime(18875): android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=market://search?q=pname:org.liberty.android.fantastischmemopro }
+E/AndroidRuntime(18875): 	at android.app.Instrumentation.checkStartActivityResult(Instrumentation.java:1765)
+E/AndroidRuntime(18875): 	at android.app.Instrumentation.execStartActivity(Instrumentation.java:1485)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivityFromChild(Activity.java:4286)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivityFromChild(Activity.java:4262)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivityForResult(Activity.java:3767)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivityForResult(Activity.java:3697)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivity(Activity.java:4007)
+E/AndroidRuntime(18875): 	at android.app.Activity.startActivity(Activity.java:3975)
+E/AndroidRuntime(18875): 	at org.liberty.android.fantastischmemo.MiscTab$2.onClick(MiscTab.java:238)
+E/AndroidRuntime(18875): 	at com.android.internal.app.AlertController$ButtonHandler.handleMessage(AlertController.java:160)
+E/AndroidRuntime(18875): 	at android.os.Handler.dispatchMessage(Handler.java:102)
+E/AndroidRuntime(18875): 	at android.os.Looper.loop(Looper.java:135)
+E/AndroidRuntime(18875): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime(18875): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime(18875): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime(18875): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+E/AndroidRuntime(18875): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+E/AndroidRuntime(18875): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
+
+### Manual：手工测试
+***
+AnyMemo
+```
+E/AndroidRuntime( 1782): Process: org.liberty.android.fantastischmemo, PID: 1782
+E/AndroidRuntime( 1782): android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@faefb49 is not valid; is your activity running?
+E/AndroidRuntime( 1782): 	at android.view.ViewRootImpl.setView(ViewRootImpl.java:562)
+E/AndroidRuntime( 1782): 	at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:272)
+E/AndroidRuntime( 1782): 	at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:69)
+E/AndroidRuntime( 1782): 	at android.app.Dialog.show(Dialog.java:298)
+E/AndroidRuntime( 1782): 	at org.liberty.android.fantastischmemo.downloader.DownloaderAnyMemo$2$2.run(DownloaderAnyMemo.java:127)
+E/AndroidRuntime( 1782): 	at android.os.Handler.handleCallback(Handler.java:739)
+E/AndroidRuntime( 1782): 	at android.os.Handler.dispatchMessage(Handler.java:95)
+E/AndroidRuntime( 1782): 	at android.os.Looper.loop(Looper.java:135)
+E/AndroidRuntime( 1782): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime( 1782): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime( 1782): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime( 1782): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+E/AndroidRuntime( 1782): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+E/AndroidRuntime( 1782): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+D/AndroidRuntime(21159):
+```
+* Nectoid
+```
+E/AndroidRuntime( 9674): java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.kvance.Nectroid-1/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]] couldn't find "libmp3streamer.so"
+E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.MP3Streamer.<clinit>(MP3Streamer.java:400)
+E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.PlayerService.startPlaying(PlayerService.java:261)
+E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.PlayerService.handleCommand(PlayerService.java:240)
+E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.ForegroundService.onStartCommand(ForegroundService.java:149)
+E/AndroidRuntime( 9801): Process: com.kvance.Nectroid, PID: 9801
+```
+* Mileage
+```
+E/AndroidRuntime(30403): Process: com.evancharlton.mileage, PID: 30403
+E/AndroidRuntime(30403): java.lang.NumberFormatException: Invalid long: "25000vbb"
+E/AndroidRuntime(30403): 	at java.lang.Long.invalidLong(Long.java:124)
+E/AndroidRuntime(30403): 	at java.lang.Long.parse(Long.java:363)
+E/AndroidRuntime(30403): 	at java.lang.Long.parseLong(Long.java:353)
+E/AndroidRuntime(30403): 	at java.lang.Long.parseLong(Long.java:321)
+E/AndroidRuntime(30403): 	at com.evancharlton.mileage.views.DeltaView.getDelta(DeltaView.java:63)
+E/AndroidRuntime(30403): 	at com.evancharlton.mileage.ServiceIntervalTemplateActivity.setFields(ServiceIntervalTemplateActivity.java:83)
+E/AndroidRuntime(30403): 	at com.evancharlton.mileage.BaseFormActivity$1.onClick(BaseFormActivity.java:53)
+E/AndroidRuntime(30403): 	at android.view.View.performClick(View.java:4756)
+E/AndroidRuntime(30403): 	at android.view.View$PerformClick.run(View.java:19749)
+E/AndroidRuntime(30403): 	at android.os.Handler.handleCallback(Handler.java:739)
+E/AndroidRuntime(30403): 	at android.os.Handler.dispatchMessage(Handler.java:95)
+E/AndroidRuntime(30403): 	at android.os.Looper.loop(Looper.java:135)
+E/AndroidRuntime(30403): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime(30403): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime(30403): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime(31162): java.lang.IllegalArgumentException: Unable to load vehicle #3
+E/AndroidRuntime(31162): 	at com.evancharlton.mileage.dao.Vehicle.loadById(Vehicle.java:104)
+E/AndroidRuntime(31162): 	at com.evancharlton.mileage.FillupActivity.getVehicle(FillupActivity.java:79)
+E/AndroidRuntime(31162): 	at com.evancharlton.mileage.FillupActivity.access$100(FillupActivity.java:47)
+E/AndroidRuntime(31162): 	at com.evancharlton.mileage.FillupActivity$1.onItemSelected(FillupActivity.java:233)
+E/AndroidRuntime(31162): 	at android.widget.AdapterView.fireOnSelected(AdapterView.java:897)
+E/AndroidRuntime(31162): 	at android.widget.AdapterView.access$200(AdapterView.java:48)
+E/AndroidRuntime(31162): 	at android.widget.AdapterView$SelectionNotifier.run(AdapterView.java:865)
+E/AndroidRuntime(31162): 	at android.os.Handler.handleCallback(Handler.java:739)
+E/AndroidRuntime(31162): 	at android.os.Handler.dispatchMessage(Handler.java:95)
+E/AndroidRuntime(31162): 	at android.os.Looper.loop(Looper.java:135)
+E/AndroidRuntime(31162): 	at android.app.ActivityThread.main(ActivityThread.java:5221)
+E/AndroidRuntime(31162): 	at java.lang.reflect.Method.invoke(Native Method)
+E/AndroidRuntime(31162): 	at java.lang.reflect.Method.invoke(Method.java:372)
+E/AndroidRuntime(31162): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+E/AndroidRuntime(31162): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+E/AndroidRuntime(31162): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+D/AndroidRuntime(32470):
+```
+* spotify
+```
+java.lang.RuntimeException: Unable to start activity ComponentInfo{com.spotify.music/com.spotify.mobile.android.ui.activity.ShareToSpotifyActivity}: java.lang.IllegalStateException: Called while creating a loader
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:135)
+	at android.app.ActivityThread.main(ActivityThread.java:5221)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:372)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+Caused by: java.lang.IllegalStateException: Called while creating a loader
+	at fs.a(SourceFile:596)
+	at com.spotify.mobile.android.ui.activity.ShareToSpotifyActivity.onStart(SourceFile:4043)
+	at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1220)
+	at android.app.Activity.performStart(Activity.java:5949)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2261)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+	at android.app.ActivityThread.access$800(ActivityThread.java:144)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+	at android.os.Handler.dispatchMessage(Handler.java:102)
+	at android.os.Looper.loop(Looper.java:135)
+	at android.app.ActivityThread.main(ActivityThread.java:5221)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:372)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
