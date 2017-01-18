@@ -5,6 +5,7 @@
 ### Xdroid：共计25个Bugs
 *** 
 * **whatsapp**：1个Bug
+
 ```
 java.lang.ArrayIndexOutOfBoundsException: length=12; index=-1
 	at java.util.ArrayList.get(ArrayList.java:310)
@@ -66,7 +67,9 @@ java.lang.ArrayIndexOutOfBoundsException: length=12; index=-1
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **spotify**:3个Bugs
+
 ```
 java.lang.IllegalStateException
 	at dnk.b(SourceFile:159)
@@ -134,6 +137,7 @@ java.lang.IllegalStateException
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 ```
  java.lang.NullPointerException: Attempt to invoke virtual method 'void et.finish()' on a null object reference
 	at iyq.a(SourceFile:175)
@@ -157,6 +161,7 @@ java.lang.IllegalStateException
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 ```
 java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.String org.json.JSONObject.optString(java.lang.String)' on a null object reference
 	at fye.a(SourceFile:293)
@@ -172,11 +177,15 @@ java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Stri
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **twitter**：1个Bug
+
 ```
 ANR: com.android.location.fusedInput dispatching timed out (Waiting because no window has focus but there is a focused application that may eventually add a window when it finishes starting up.)
 ```
+
 * **facebook**:4个Bugs
+
 ```
 java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object android.content.Context.getSystemService(java.lang.String)' on a null object reference
 	at android.view.ContextThemeWrapper.getSystemService(ContextThemeWrapper.java:113)
@@ -194,6 +203,7 @@ java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Obje
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 ```
 java.lang.NullPointerException: Attempt to invoke virtual method 'void X.E8m.a(X.9qT)' on a null object reference
 	at com.facebook.reaction.ui.fragment.BaseReactionFragment.a(:2082686)
@@ -219,6 +229,7 @@ java.lang.NullPointerException: Attempt to invoke virtual method 'void X.E8m.a(X
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 ```
 java.lang.ClassCastException: X.Ewl cannot be cast to X.2lq
 	at com.facebook.friending.center.tabs.requests.FriendsCenterRequestsFragment.a(:2183353)
@@ -284,7 +295,8 @@ java.lang.ClassCastException: X.Ewl cannot be cast to X.2lq
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
  ```
- ```
+
+```
 java.lang.IllegalStateException: Unhandled: a
 	at X.FXV.a(:2255141)
 	at X.FXi.a(:2255329)
@@ -306,7 +318,9 @@ java.lang.IllegalStateException: Unhandled: a
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **printerest**:1个Bug
+
 ```
 java.lang.RuntimeException: Unable to pause activity {com.pinterest/com.pinterest.activity.create.CameraActivity}: java.lang.RuntimeException: setParameters failed
 	at android.app.ActivityThread.performPauseActivity(ActivityThread.java:3225)
@@ -344,7 +358,9 @@ Caused by: java.lang.RuntimeException: setParameters failed
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
  ```
+
 * **necdroid**:1个Bug
+
 ```
     12-20 14:20:43.770 I/Xposed  (15769): java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.kvance.Nectroid-1/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]] couldn't find "libmp3streamer.so"
     12-20 14:20:43.770 I/Xposed  (15769): 	at java.lang.Runtime.loadLibrary(Runtime.java:366)
@@ -366,7 +382,9 @@ Caused by: java.lang.RuntimeException: setParameters failed
     12-20 14:20:43.770 I/Xposed  (15769): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
     12-20 14:20:43.775 I/Xposed  (15769): URL construct https://www.scenemusic.net/demovibes/xml/queue/
 ```
+
 * **com.evancharlton.mileage**:3个Bugs
+
 ```
   java.lang.RuntimeException: Unable to start activity ComponentInfo{com.evancharlton.mileage/com.evancharlton.mileage.charts.MinimumDistanceChart}: java.lang.IllegalArgumentException: Point already added to series
 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
@@ -402,8 +420,9 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
- ```
- ```
+```
+
+```
   android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW dat=mailto:xxxxxxx@xxxxxxxxxxxx.xxx (has extras) }
 	at android.app.Instrumentation.checkStartActivityResult(Instrumentation.java:1765)
 	at android.app.Instrumentation.execStartActivity(Instrumentation.java:1485)
@@ -464,8 +483,9 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
-  ```
-  ```
+```
+
+```
     java.lang.NumberFormatException: Invalid long: "  22=="
     	at java.lang.Long.invalidLong(Long.java:124)
     	at java.lang.Long.parse(Long.java:363)
@@ -486,7 +506,9 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **org.liberty.android.fantastischmemo**:3个Bugs
+
 ```
   android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@25efe8ae is not valid; is your activity running?
     	at android.view.ViewRootImpl.setView(ViewRootImpl.java:562)
@@ -504,11 +526,13 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
  ```
- ```
+
+```
  12-12 09:45:43.186 24826-24891/? E/ActivityManager: ANR in org.liberty.android.fantastischmemo (org.liberty.android.fantastischmemo/.downloader.DropboxLauncher)
                                                         PID: 6635
                                                         Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  dd
 ```
+
 ```
 java.lang.NumberFormatException: Invalid int: "herguless"
 	at java.lang.Integer.invalidInt(Integer.java:138)
@@ -528,6 +552,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)	
 ```
+
 * **passwordmanager**:1个Bug
 
 ```  
@@ -564,7 +589,9 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **org.totschnig.myexpenses**:1个Bug
+
 ``` 
   java.lang.NullPointerException: Attempt to invoke virtual method 'org.totschnig.myexpenses.Utils$Result org.totschnig.myexpenses.GrisbiImport$MyAsyncTask.getResult()' on a null object reference
     	at org.totschnig.myexpenses.GrisbiImport.markAsDone(GrisbiImport.java:438)
@@ -582,6 +609,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **com.fsck.k9**：4个Bugs
  
  ```
@@ -597,6 +625,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     E/AndroidRuntime(18099):  at com.fsck.k9.activity.MessageCompose$8.run(MessageCompose.java:2004)
     E/AndroidRuntime(21373): Process: com.fsck.k9, PID: 21373
 ```
+
 ```
 E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening provider com.android.providers.media.MediaDocumentsProvider from ProcessRecord{932db3a 21373:com.fsck.k9/u0a55} (pid=21373, uid=10055) requires android.permission.MANAGE_DOCUMENTS or android.permission.MANAGE_DOCUMENTS
     E/AndroidRuntime(21373):  at com.fsck.k9.activity.MessageCompose.addAttachment(MessageCompose.java:1593)
@@ -618,6 +647,7 @@ E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening
     E/AndroidRuntime(29917):  at com.fsck.k9.service.CoreService.onStart(CoreService.java:74)
     E/AndroidRuntime(30319): Process: com.fsck.k9, PID: 30319
 ```
+
 ```
     E/AndroidRuntime(30319): java.lang.RuntimeException: Unable to start service com.fsck.k9.service.MailService@2c3da06a with null: java.lang.NullPointerException: Attempt to invoke virtual method 'int android.content.Intent.getIntExtra(java.lang.String, int)' on a null object reference
     E/AndroidRuntime(30319):  at com.fsck.k9.service.CoreService.onStart(CoreService.java:74)
@@ -625,6 +655,7 @@ E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening
     E/AndroidRuntime(30908): java.lang.RuntimeException: Unable to start service com.fsck.k9.service.MailService@2c3da06a with null: java.lang.NullPointerException: Attempt to invoke virtual method 'int android.content.Intent.getIntExtra(java.lang.String, int)' on a null object reference
     E/AndroidRuntime(30908):  at com.fsck.k9.service.CoreService.onStart(CoreService.java:74)
 ```
+
 ```
     java.lang.RuntimeException: Unable to start service com.fsck.k9.service.PushService@290c708d with null: java.lang.NullPointerException: Attempt to invoke virtual method 'int android.content.Intent.getIntExtra(java.lang.String, int)' on a null object reference
     	at android.app.ActivityThread.handleServiceArgs(ActivityThread.java:2881)
@@ -653,7 +684,9 @@ E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening
     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * **com.eleybourn.bookcatalogue**:2个Bugs
+
 ```  
   E/AndroidRuntime(18584): android.database.CursorIndexOutOfBoundsException: Index 0 requested, with a size of 0
     E/AndroidRuntime(18584): 	at android.database.AbstractCursor.checkPosition(AbstractCursor.java:426)
@@ -710,6 +743,7 @@ E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening
     E/AndroidRuntime(18584): 	at android.view.ViewR
     D/AndroidRuntime( 7189):
 ```
+
 ```
 java.lang.NullPointerException: Attempt to invoke interface method 'int java.util.List.size()' on a null object reference
 	at android.widget.ArrayAdapter.getCount(ArrayAdapter.java:330)
@@ -727,7 +761,9 @@ java.lang.NullPointerException: Attempt to invoke interface method 'int java.uti
 
 ### Monkey：共计6个Bugs
 ***
+
 - Pinteest Crash
+
 ```
  java.lang.NullPointerException: Attempt to read from field 'int android.view.View.mPrivateFlags' on a null object reference
 	at android.view.ViewGroup.resetCancelNextUpFlag(ViewGroup.java:2225)
@@ -774,7 +810,9 @@ java.lang.NullPointerException: Attempt to invoke interface method 'int java.uti
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 - Facebook ANR
+
 ```
 E/ActivityManager( 8533): ANR in com.facebook.orca (com.facebook.orca/.auth.Star
     tScreenActivity)
@@ -783,13 +821,17 @@ E/ActivityManager( 8533): ANR in com.facebook.orca (com.facebook.orca/.auth.Star
     o window has focus but there is a focused application that may eventually add a
     window when it finishes starting up.)
 ```
+
 - Wechat ANR
+
 ```
 E/ActivityManager( 8533): ANR in com.tencent.mm:tools (com.tencent.mm/.plugin.webview.ui.tools.WebViewUI)
 E/ActivityManager( 8533): PID: 4529
 E/ActivityManager( 8533): Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  Outbound queue length: 0.  Wait queue length: 1.)
 ```
+
 - com.eleybourn.bookcatalogue
+
 ```
 E/AndroidRuntime(27791): Process: com.eleybourn.bookcatalogue, PID: 27791
 E/AndroidRuntime(27791): java.lang.NullPointerException: Attempt to invoke interface method 'int java.util.List.size()' on a null object reference
@@ -805,7 +847,9 @@ E/AndroidRuntime(27791): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCal
 E/AndroidRuntime(27791): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 E/AndroidRuntime(27791): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * K9Mail
+
 ```
 E/AndroidRuntime( 2653): Process: com.fsck.k9, PID: 2653
 E/AndroidRuntime( 2653): java.lang.NullPointerException: Attempt to read from field 'com.fsck.k9.activity.FolderInfoHolder com.fsck.k9.activity.MessageInfoHolder.folder' on a null object reference
@@ -860,7 +904,9 @@ E/AndroidRuntime( 2653): 	at com.android.internal.os.ZygoteInit$MethodAndArgsCal
 E/AndroidRuntime( 2653): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
 E/AndroidRuntime( 2653): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
+
 * fantastischmemo
+
 ```
  E/AndroidRuntime(18875): Process: org.liberty.android.fantastischmemo, PID: 18875
 E/AndroidRuntime(18875): android.content.ActivityNotFoundException: No Activity found to handle Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=market://search?q=pname:org.liberty.android.fantastischmemopro }
@@ -886,7 +932,9 @@ E/AndroidRuntime(18875): 	at de.robv.android.xposed.XposedBridge.main(XposedBrid
 
 ### Manual：手工测试
 ***
-AnyMemo
+
+* AnyMemo
+
 ```
 E/AndroidRuntime( 1782): Process: org.liberty.android.fantastischmemo, PID: 1782
 E/AndroidRuntime( 1782): android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@faefb49 is not valid; is your activity running?
@@ -906,7 +954,9 @@ E/AndroidRuntime( 1782): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.
 E/AndroidRuntime( 1782): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 D/AndroidRuntime(21159):
 ```
+
 * Nectoid
+
 ```
 E/AndroidRuntime( 9674): java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.kvance.Nectroid-1/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]] couldn't find "libmp3streamer.so"
 E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.MP3Streamer.<clinit>(MP3Streamer.java:400)
@@ -915,7 +965,9 @@ E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.PlayerService.handleCommand(Pla
 E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.ForegroundService.onStartCommand(ForegroundService.java:149)
 E/AndroidRuntime( 9801): Process: com.kvance.Nectroid, PID: 9801
 ```
+
 * Mileage
+
 ```
 E/AndroidRuntime(30403): Process: com.evancharlton.mileage, PID: 30403
 E/AndroidRuntime(30403): java.lang.NumberFormatException: Invalid long: "25000vbb"
@@ -954,6 +1006,7 @@ E/AndroidRuntime(31162): 	at de.robv.android.xposed.XposedBridge.main(XposedBrid
 D/AndroidRuntime(32470):
 ```
 * spotify
+
 ```
 java.lang.RuntimeException: Unable to start activity ComponentInfo{com.spotify.music/com.spotify.mobile.android.ui.activity.ShareToSpotifyActivity}: java.lang.IllegalStateException: Called while creating a loader
 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
