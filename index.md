@@ -1,9 +1,9 @@
 ## Xdroid UI
 ### Float window
-![](floatwindow.png)
+![](images/floatwindow.png)
 
 ### Main function UI
-![](main.png)
+![](images/main.png)
 
 ## Experiment setup
 Since automated testing can not provide the resources that apps depend on, manual testing is expensive and cannot effectively detect bugs as random testing. We conduct experiments to evaluate if Xdroid can combine the benefits of both manual testing and random testing to increase test efficiency.
