@@ -54,6 +54,7 @@ We selected 12 commercial apps which are used by millions of users from [Google 
 ![](images/google.png)
 
 ## Bugs Found
+
 | Subject     |    Bugs  |
 | ---         |    ---   |
 | Manual      |     6    |
@@ -63,6 +64,7 @@ We selected 12 commercial apps which are used by millions of users from [Google 
 
 ### Xdroid：25 Bugs
 **Yahoo Mail** : 1
+
 ```
 java.lang.NullPointerException: Attempt to write to field 'boolean com.yahoo.mail.ui.a.ag.m' on a null object reference
 	at com.yahoo.mail.ui.fragments.gj.V(Yahoo:8154)
