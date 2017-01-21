@@ -5,6 +5,13 @@
 ## List of Apps
 ![](images/apps.png)
 
+## Coverage Results
+![](images/open.png)
+
+![](images/google.png)
+
+## Bugs Found
+
 ### Xdroid：25 Bugs
 ***
 * **whatsapp**：1
