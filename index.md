@@ -5,23 +5,37 @@
 ## List of Apps
 ![](images/apps.png)
 
-## Coverage Results
-|    name    | age |
-| ---------- | --- |
-| LearnShare |  12 |
-| Mike       |  32 |
+## Code coverage results for open-source apps
+
+|Subject       |               |	   |	  |	   | Monkey |	| 	| Xdroid |	|           | 	| Manual	| | |
+| ------       | --------      |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
+|Subject Name	 | Category      |	#Activity	| App pkg	| Version	| Cov |	#ANR	| #Crash	| Manual(min) |	Cov	| #ANR	 | #Crash	| Cov	| #ANR	| #Crash |
+|AnyMemo       |	Education	   | 35	| org.liberty.android.fantastischmemo	| 8.3.1 |	25.32 |	0	|1	|3	|27.21 |	1	| 1	| 35.92 |	0	| 1|
+|BookCatalogue |	Productivity | 22	| com.eleybourn.bookcatalogue	| 3.8	| 18.45 |	0	| 1	| 4	 |43.13 |	0	|2	| 43.32 |	0	|0|
+|Mileage	     |  Finance	     | 51	| com.evancharlton.mileage	|3.1.1	|	23.22 |	0	|0	|3	| 55.08 |	0	|3	|53.68 |	0	|2|
+|Multi SMS	   |  Tools        |	7	|com.hectorone.multismssender	|2.3	| 41.33 |	0	|0	|3	| 66.34 |	0	|0	|65.57 |	0|	0|
+|Nectroid      |	Media	       |7|	com.kvance.Nectroid|	1.2.4	| 31.64 |	0	|0	|2.5	| 	50.66 |	0	|1	|60.33 |	0|	1|
+|MyExpenses	   |  Finance      |	13|	org.totschnig.myexpenses|	1.6.0|	20.77 |	0	|0	|2.5|		38.05 |	0	|1	|56.19 |	0|	0|
+|K-9Mail       |	Mail         |	25	|com.fsck.k9|	3.512| 5.06 |	0	|1	|6|		30.87 |	0	|4	|	32.49 |	0	|1|
+|KeePassDroid  |	Tools        |	15|	com.android.keepass|	1.9.8	| 5.02 |	0	|0 | 3	|	11.32 |	0 |	1 | 8.78 | 0 |0|
+
+## Activity coverage results for commercial apps
 
 |Subject |  |	|	|	| Monkey |	| 	| Xdroid |	|           | 	| Manual	| | |
 | ---- | --- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |--- |
-|Subject Name	| Category |	#Activity	| App pkg	| Version	| Cov |	ANR	| #Crash	| Manual(min) |	Cov	| ANR	 | #Crash	| Cov	| ANR	| #Crash |
-|AnyMemo |	Education	| 35	| org.liberty.android.fantastischmemo	| 8.3.1 |	25.32 |	0	|1	|3	|27.21 |	1	| 1	| 35.92 |	0	| 1|
-|BookCatalogue |	Productivity | 22	| com.eleybourn.bookcatalogue	| 3.8	| 18.45 |	0	| 1	| 4	 |43.13 |	0	|2	| 43.32 |	0	|0|
-|Mileage	| Finance	| 51	| com.evancharlton.mileage	|3.1.1	|	23.22 |	0	|0	|3	| 55.08 |	0	|3	|53.68 |	0	|2|
-|Multi SMS	|Tools|	7	|com.hectorone.multismssender	|2.3	| 41.33 |	0	|0	|3	| 66.34 |	0	|0	|65.57 |	0|	0|
-|Nectroid|	Media	|7|	com.kvance.Nectroid|	1.2.4	| 31.64 |	0	|0	|2.5	| 	50.66 |	0	|1	|60.33 |	0|	1|
-|MyExpenses	|Finance|	13|	org.totschnig.myexpenses|	1.6.0|	20.77 |	0	|0	|2.5|		38.05 |	0	|1	|56.19 |	0|	0|
-|K-9Mail|	Mail|	25	|com.fsck.k9|	3.512| 5.06 |	0	|1	|6|		30.87 |	0	|4	|	32.49 |	0	|1|
-|KeePassDroid |	Tools|	15|	com.android.keepass|	1.9.8	| 5.02 |	0	|0 | 3	|	11.32 |	0 |	1 | 8.78 | 0 |0|
+|Subject Name	| Category |	#Activity	| App pkg	| Version	| Cov |	#ANR	| #Crash	| Manual(min) |	Cov	| #ANR	 | #Crash	| Cov	| #ANR	| #Crash |
+|wish        |	Shopping	    | 49	| com.contextlogic.wish	  | 4.2.1             |	12.24 |	0	| 0	| 5	|	30.61 |	0	| 0	| 	42.85 |	0	| 0 |
+|Messenger   |	Communication | 121	| com.facebook.orca	      |33.0.0.31.250	    |	1.24 	| 0	|0	|	6	| 19.00  |	0	| 0	|19.80  | 	0	|0|
+|instagram   |  Media	        | 26	| com.instagram.android	  |10.3.0	 	          | 11.50 |	0	|0	|	3	| 26.92  |	0 |	0	|	34.61 | 	0	|0|
+|pinterest   |  Media         |	34	| com.pinterest	          |6.6.0	            |	8.82 	| 0	|0	|	6 | 22.06  |	0 |	1	|	39.70 |	0	|0|
+|snapchat    |	Communication	|  9  |	com.snapchat.android    |8.0.0	            |	22.22 |	0	|0	| 2 | 44.44  |	0	| 0	| 44.44 |	0	|0|
+|spotify	   |  Media         |	97  |	com.spotify.music       |7.0.0.1.1369		    | 4.64 	| 0	|0	| 7 | 15.46  |  0	| 3 |	17.52 |	0	|1|
+|Wechat      |  Social        |	705	| com.fsck.k9             |6.3.32	 	          | 0.57 	| 1	|0	|	5 | 8.22   |	0	| 0	| 12.40 | 0 |	0|
+|twitter     |	Social        |	176 |	com.twitter.android     |6.28.0	 	          | 2.27 	| 0	|0	|	5	| 27.27  |	1 | 0	|	31.25 |	0	|0|
+|facebook    |	Social        |	418 |	com.facebook.katana     |106.0.0.26.68      | 1.43 	| 1	|0	| 4 | 6.34   | 	0	| 4 |	8.13  | 0 |	0|
+|Google      |	Tools         |	25  |	com.google.android.apps.translate | 5.6.0   | 38.00 |	0	|0	|	6	| 52.00  |	0	| 0	|52.00 	| 0	|0|
+|whatsapp    |	Communication |	122 |	com.whatsapp            |	2.16.396	 	      | 2.86  |	0	|0	|	4	| 28.68  |	0	| 1	|40.16  | 0 |	0|
+|yahoo mail  |	Mail          |	56  |	com.yahoo.mobile.client.android.mail|5.11.6 | 10.71 | 0	|0	|	5	| 30.35	 |	0	| 1	| 35.71 |	0	|0|
 
 ![](images/open.png)
 
