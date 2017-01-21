@@ -6,6 +6,24 @@
 ![](images/apps.png)
 
 ## Coverage Results
+|    name    | age |
+| ---------- | --- |
+| LearnShare |  12 |
+| Mike       |  32 |
+
+					Monkey							Xdroid				Manual
+|Subject Name	| Category |	#Activity	| App pkg	| Version	| Cov1	Cov2	AVG |	ANR	| #Crash	| Manual time(minutes) |	Cov1	Cov2	AVG	| ANR	| #Crash	| Cov1	Cov2	AVG	| ANR	| #Crash |
+
+|AnyMemo |	Education	| 35	| org.liberty.android.fantastischmemo	| 8.3.1 |	16.48 34.15 	25.32 |	0	|1	|3	|29.70 	24.72 	27.21 |	1	| 1	| 31.62 	40.22 	35.92 |	0	| 1|
+|BookCatalogue |	Productivity | 22	| com.eleybourn.bookcatalogue	| 3.8	| 25.71 	11.19 	18.45 |	0	| 1	| 4	 |43.66 	42.60 	43.13 |	0	|2	|38.74 	47.89 	43.32 |	0	|0|
+|Mileage	| Finance	| 51	| com.evancharlton.mileage	|3.1.1	|27.37 	19.06 	23.22 |	0	|0	|3	|47.88 	62.28 	55.08 |	0	|3	|48.91 	58.44 	53.68 |	0	|2|
+|Multi SMS	|Tools|	7	|com.hectorone.multismssender	|2.3	|61.12 	21.54 	41.33 |	0	|0	|3	|67.32 	65.36 	66.34 |	0	|0	|65.89 	65.24 	65.57 |	0|	0|
+|Nectroid|	Media	|7|	com.kvance.Nectroid|	1.2.4	|32.21 	31.06 	31.64 |	0	|0	|2.5	| 52.57 	48.76 	50.66 |	0	|1	|62.33 	58.34 	60.33 |	0|	1|
+|MyExpenses	|Finance|	13|	org.totschnig.myexpenses|	1.6.0|	13.41 	28.12 	20.77 |	0	|0	|2.5|	41.33 	34.77 	38.05 |	0	|1	|57.20 	55.17 	56.19 |	0|	0|
+|K-9Mail|	Mail|	25	|com.fsck.k9|	3.512|	4.60 	5.51 	5.06 |	0	|1	|6|	34.14 	27.60 	30.87 |	0	|4	|	32.49 	0 32.49 |	0	|1|
+|KeePassDroid |	Tools|	15|	com.android.keepass|	1.9.8	|1.90 	8.13 	5.02 |	0	|0 | 3	| 17.80 	4.84 	11.32 |	0 |	1 |	11.78 	5.78 	8.78| 0 |0|
+<!-- Average							21.35 			7			40.33 					44.53 -->
+
 ![](images/open.png)
 
 ![](images/google.png)
