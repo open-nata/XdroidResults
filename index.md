@@ -1,10 +1,16 @@
-## Xdroid Overview
+## Xdroid UI
+### Float window
+![](floatwindow.png)
 
+### Main function UI
+![](main.png)
+
+## Experiment setup
 Since automated testing can not provide the resources that apps depend on, manual testing is expensive and cannot effectively detect bugs as random testing. We conduct experiments to evaluate if Xdroid can combine the benefits of both manual testing and random testing to increase test efficiency.
 
 We evaluated Xdroid with two other effective approaches in this study: manual testing and Monkey test tool provided by Android. For manual testing and Xdroid, we invited five users to help with the process of test and all five users we chose in this study are students at Nanjing University who have experience using Android apps.
 
-## List of Apps
+## List of apps
 We selected 12 commercial apps which are used by millions of users from [Google play top charts](https://play.google.com/store/apps/top) and 8 open-source apps from the Android open-source apps repository [F-Droid](https://f-droid.org/). The number of activities listed in the AndroidManifest file of these apps ranges from 7 to 705, with a mean of 100. The SLOC of open source apps ranges from 1k to 21K, with a mean of 8K.
 
 ![](images/apps.png)
@@ -47,14 +53,75 @@ We selected 12 commercial apps which are used by millions of users from [Google 
 
 ## Bugs Found
 | Subject     |    Bugs  |
+| ---         |    ---   |
 | Manual      |     6    |
 | Monkey      |     5    |
 | Xdroid      |     26   |
 
 
 ### Xdroid：25 Bugs
-***
-* **whatsapp**：1
+**Yahoo Mail** : 1
+```
+java.lang.NullPointerException: Attempt to write to field 'boolean com.yahoo.mail.ui.a.ag.m' on a null object reference
+	at com.yahoo.mail.ui.fragments.gj.V(Yahoo:8154)
+	at com.yahoo.mail.a.g.onItemClick(Yahoo:10374)
+	at android.widget.AdapterView.performItemClick(AdapterView.java:300)
+	at android.widget.AbsListView.performItemClick(AbsListView.java:1143)
+	at android.widget.AbsListView.onKeyUp(AbsListView.java:3185)
+	at android.widget.ListView.commonKey(ListView.java:2300)
+	at android.widget.ListView.onKeyUp(ListView.java:2155)
+	at android.view.KeyEvent.dispatch(KeyEvent.java:2633)
+	at android.view.View.dispatchKeyEvent(View.java:8338)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1595)
+	at android.widget.ListView.dispatchKeyEvent(ListView.java:2130)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at android.view.ViewGroup.dispatchKeyEvent(ViewGroup.java:1600)
+	at com.android.internal.policy.impl.PhoneWindow$DecorView.superDispatchKeyEvent(PhoneWindow.java:2306)
+	at com.android.internal.policy.impl.PhoneWindow.superDispatchKeyEvent(PhoneWindow.java:1682)
+	at android.app.Activity.dispatchKeyEvent(Activity.java:2699)
+	at android.support.v7.a.w.dispatchKeyEvent(Yahoo:547)
+	at android.support.v7.view.n.dispatchKeyEvent(Yahoo:57)
+	at android.support.v7.a.ab.dispatchKeyEvent(Yahoo:315)
+	at com.android.internal.policy.impl.PhoneWindow$DecorView.dispatchKeyEvent(PhoneWindow.java:2221)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processKeyEvent(ViewRootImpl.java:3918)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:3880)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3578)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:3635)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:3476)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:3449)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:3502)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:3468)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:3611)
+	at android.view.ViewRootImpl$ImeInputStage.onFinishedInputEvent(ViewRootImpl.java:3772)
+	at android.view.inputmethod.InputMethodManager$PendingEvent.run(InputMethodManager.java:2208)
+	at android.view.inputmethod.InputMethodManager.invokeFinishedInputEventCallback(InputMethodManager.java:1849)
+	at android.view.inputmethod.InputMethodManager.finishedInputEvent(InputMethodManager.java:1840)
+	at android.view.inputmethod.InputMethodManager$ImeInputEventSender.onInputEventFinished(InputMethodManager.java:2185)
+	at android.view.InputEventSender.dispatchInputEventFinished(InputEventSender.java:141)
+	at android.os.MessageQueue.nativePollOnce(Native Method)
+	at android.os.MessageQueue.next(MessageQueue.java:143)
+	at android.os.Looper.loop(Looper.java:122)
+	at android.app.ActivityThread.main(ActivityThread.java:5221)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at java.lang.reflect.Method.invoke(Method.java:372)
+	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
+```
+
+**whatsapp**：1
 
 ```
 java.lang.ArrayIndexOutOfBoundsException: length=12; index=-1
