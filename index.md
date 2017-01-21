@@ -62,7 +62,7 @@ We selected 12 commercial apps which are used by millions of users from [Google 
 | Xdroid      |     26   |
 
 
-### Xdroid：25 Bugs
+### Xdroid：26 Bugs
 **Yahoo Mail** : 1
 
 ```
@@ -189,7 +189,7 @@ java.lang.ArrayIndexOutOfBoundsException: length=12; index=-1
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **spotify**:3个Bugs
+* **spotify**: 3
 
 ```
 java.lang.IllegalStateException
@@ -299,13 +299,13 @@ java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Stri
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **twitter**：1个Bug
+* **twitter**：1
 
 ```
 ANR: com.android.location.fusedInput dispatching timed out (Waiting because no window has focus but there is a focused application that may eventually add a window when it finishes starting up.)
 ```
 
-* **facebook**:4个Bugs
+* **facebook**: 4
 
 ```
 java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object android.content.Context.getSystemService(java.lang.String)' on a null object reference
@@ -439,7 +439,7 @@ java.lang.IllegalStateException: Unhandled: a
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **printerest**:1个Bug
+* **printerest**:1
 
 ```
 java.lang.RuntimeException: Unable to pause activity {com.pinterest/com.pinterest.activity.create.CameraActivity}: java.lang.RuntimeException: setParameters failed
@@ -479,7 +479,7 @@ Caused by: java.lang.RuntimeException: setParameters failed
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **necdroid**:1个Bug
+* **necdroid**:1
 
 ```
     12-20 14:20:43.770 I/Xposed  (15769): java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.kvance.Nectroid-1/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]] couldn't find "libmp3streamer.so"
@@ -503,7 +503,7 @@ Caused by: java.lang.RuntimeException: setParameters failed
     12-20 14:20:43.775 I/Xposed  (15769): URL construct https://www.scenemusic.net/demovibes/xml/queue/
 ```
 
-* **com.evancharlton.mileage**:3个Bugs
+* **com.evancharlton.mileage**:3
 
 ```
   java.lang.RuntimeException: Unable to start activity ComponentInfo{com.evancharlton.mileage/com.evancharlton.mileage.charts.MinimumDistanceChart}: java.lang.IllegalArgumentException: Point already added to series
@@ -627,7 +627,7 @@ Caused by: java.lang.IllegalArgumentException: Point already added to series
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **org.liberty.android.fantastischmemo**:3个Bugs
+* **org.liberty.android.fantastischmemo**:3
 
 ```
   android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@25efe8ae is not valid; is your activity running?
@@ -673,7 +673,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **passwordmanager**:1个Bug
+* **passwordmanager**:1
 
 ```  
   java.lang.Runtime Exception: Unable to start activity ComponentInfo{com.android.keepass/com.keepassdroid.search.SearchResults}: java.lang.NullPointerException: Attempt to invoke virtual method 'com.keepassdroid.database.PwGroup com.keepassdroid.search.SearchDbHelper.search(com.keepassdroid.Database, java.lang.String)' on a null object reference
@@ -710,7 +710,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **org.totschnig.myexpenses**:1个Bug
+* **org.totschnig.myexpenses**:1
 
 ``` 
   java.lang.NullPointerException: Attempt to invoke virtual method 'org.totschnig.myexpenses.Utils$Result org.totschnig.myexpenses.GrisbiImport$MyAsyncTask.getResult()' on a null object reference
@@ -730,7 +730,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **com.fsck.k9**：4个Bugs
+* **com.fsck.k9**：4
 
 ```
     E/AndroidRuntime(14692): Process: com.fsck.k9, PID: 14692
@@ -805,7 +805,7 @@ E/AndroidRuntime(21373): java.lang.SecurityException: Permission Denial: opening
     	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* **com.eleybourn.bookcatalogue**:2个Bugs
+* **com.eleybourn.bookcatalogue**:2
 
 ```  
   E/AndroidRuntime(18584): android.database.CursorIndexOutOfBoundsException: Index 0 requested, with a size of 0
@@ -879,10 +879,10 @@ java.lang.NullPointerException: Attempt to invoke interface method 'int java.uti
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-### Monkey：共计6个Bugs
+### Monkey：6 Bugs
 ***
 
-- Pinteest Crash
+- **Pinterest** :1
 
 ```
  java.lang.NullPointerException: Attempt to read from field 'int android.view.View.mPrivateFlags' on a null object reference
@@ -931,7 +931,7 @@ java.lang.NullPointerException: Attempt to invoke interface method 'int java.uti
 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-- Facebook ANR
+- **Facebook** :1
 
 ```
 E/ActivityManager( 8533): ANR in com.facebook.orca (com.facebook.orca/.auth.Star
@@ -942,7 +942,7 @@ E/ActivityManager( 8533): ANR in com.facebook.orca (com.facebook.orca/.auth.Star
     window when it finishes starting up.)
 ```
 
-- Wechat ANR
+- **Wechat**: 1
 
 ```
 E/ActivityManager( 8533): ANR in com.tencent.mm:tools (com.tencent.mm/.plugin.webview.ui.tools.WebViewUI)
@@ -950,7 +950,7 @@ E/ActivityManager( 8533): PID: 4529
 E/ActivityManager( 8533): Reason: Input dispatching timed out (Waiting to send key event because the focused window has not finished processing all of the input events that were previously delivered to it.  Outbound queue length: 0.  Wait queue length: 1.)
 ```
 
-- com.eleybourn.bookcatalogue
+- **com.eleybourn.bookcatalogue**: 1
 
 ```
 E/AndroidRuntime(27791): Process: com.eleybourn.bookcatalogue, PID: 27791
@@ -968,7 +968,7 @@ E/AndroidRuntime(27791): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.
 E/AndroidRuntime(27791): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* K9Mail
+- **K9Mail**: 1
 
 ```
 E/AndroidRuntime( 2653): Process: com.fsck.k9, PID: 2653
@@ -1025,7 +1025,7 @@ E/AndroidRuntime( 2653): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.
 E/AndroidRuntime( 2653): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-* fantastischmemo
+**fantastischmemo** : 1
 
 ```
  E/AndroidRuntime(18875): Process: org.liberty.android.fantastischmemo, PID: 18875
@@ -1050,10 +1050,10 @@ E/AndroidRuntime(18875): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.
 E/AndroidRuntime(18875): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
-### Manual：手工测试
+### Manual：5 Bugs
 ***
 
-* AnyMemo
+**AnyMemo** : 1
 
 ```
 E/AndroidRuntime( 1782): Process: org.liberty.android.fantastischmemo, PID: 1782
@@ -1075,7 +1075,7 @@ E/AndroidRuntime( 1782): 	at de.robv.android.xposed.XposedBridge.main(XposedBrid
 D/AndroidRuntime(21159):
 ```
 
-* Nectoid
+**Nectoid** : 1
 
 ```
 E/AndroidRuntime( 9674): java.lang.UnsatisfiedLinkError: dalvik.system.PathClassLoader[DexPathList[[zip file "/data/app/com.kvance.Nectroid-1/base.apk"],nativeLibraryDirectories=[/vendor/lib, /system/lib]]] couldn't find "libmp3streamer.so"
@@ -1086,7 +1086,7 @@ E/AndroidRuntime( 9674): 	at com.kvance.Nectroid.ForegroundService.onStartComman
 E/AndroidRuntime( 9801): Process: com.kvance.Nectroid, PID: 9801
 ```
 
-* Mileage
+**Mileage** : 1
 
 ```
 E/AndroidRuntime(30403): Process: com.evancharlton.mileage, PID: 30403
@@ -1125,7 +1125,7 @@ E/AndroidRuntime(31162): 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.
 E/AndroidRuntime(31162): 	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 D/AndroidRuntime(32470):
 ```
-* spotify
+**spotify** : 1
 
 ```
 java.lang.RuntimeException: Unable to start activity ComponentInfo{com.spotify.music/com.spotify.mobile.android.ui.activity.ShareToSpotifyActivity}: java.lang.IllegalStateException: Called while creating a loader
