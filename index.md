@@ -1,10 +1,13 @@
-## Welcome to Xdroid Pages
+## Xdroid Overview
 
 该页展示的是Android自动化测试工具*Xdroid*与人工、*Monkey*大量实验的结果,如下是每种方式下发现的Bugs记录。
 
-### Xdroid：共计25个Bugs
-*** 
-* **whatsapp**：1个Bug
+## List of Apps
+![](images/apps.png)
+
+### Xdroid：25 Bugs
+***
+* **whatsapp**：1
 
 ```
 java.lang.ArrayIndexOutOfBoundsException: length=12; index=-1
@@ -549,7 +552,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
 	at java.lang.reflect.Method.invoke(Method.java:372)
 	at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
-	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)	
+	at de.robv.android.xposed.XposedBridge.main(XposedBridge.java:102)
 ```
 
 * **passwordmanager**:1个Bug
@@ -610,7 +613,7 @@ java.lang.NumberFormatException: Invalid int: "herguless"
 ```
 
 * **com.fsck.k9**：4个Bugs
- 
+
 ```
     E/AndroidRuntime(14692): Process: com.fsck.k9, PID: 14692
     E/AndroidRuntime(14692): java.lang.NullPointerException: Attempt to read from field 'com.fsck.k9.activity.FolderInfoHolder com.fsck.k9.activity.MessageInfoHolder.folder' on a null object reference
