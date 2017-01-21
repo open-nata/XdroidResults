@@ -19,6 +19,8 @@
 |K-9Mail       |	Mail         |	25	|com.fsck.k9|	3.512| 5.06 |	0	|1	|6|		30.87 |	0	|4	|	32.49 |	0	|1|
 |KeePassDroid  |	Tools        |	15|	com.android.keepass|	1.9.8	| 5.02 |	0	|0 | 3	|	11.32 |	0 |	1 | 8.78 | 0 |0|
 
+![](images/open.png)
+
 ## Activity coverage results for commercial apps
 
 |Subject |  |	|	|	| Monkey |	| 	| Xdroid |	|           | 	| Manual	| | |
@@ -36,8 +38,6 @@
 |Google      |	Tools         |	25  |	com.google.android.apps.translate | 5.6.0   | 38.00 |	0	|0	|	6	| 52.00  |	0	| 0	|52.00 	| 0	|0|
 |whatsapp    |	Communication |	122 |	com.whatsapp            |	2.16.396	 	      | 2.86  |	0	|0	|	4	| 28.68  |	0	| 1	|40.16  | 0 |	0|
 |yahoo mail  |	Mail          |	56  |	com.yahoo.mobile.client.android.mail|5.11.6 | 10.71 | 0	|0	|	5	| 30.35	 |	0	| 1	| 35.71 |	0	|0|
-
-![](images/open.png)
 
 ![](images/google.png)
 
