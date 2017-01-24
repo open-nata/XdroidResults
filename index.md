@@ -3,6 +3,7 @@ Xdroid provides a convenient float window to start/stop the test process and use
 
 ### Float window and notifications
 
+
 ![](images/floatwindow.png)
 
 ### Main function UI
