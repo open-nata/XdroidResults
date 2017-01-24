@@ -1,10 +1,11 @@
 ## Xdroid
-Xdroid provides a convenient float window to start/stop the test process and users can access the window at everywhere on the device screen. What's more, Xdroid implements a plain UI to configure the behavior of Xdroid and review test reports.
 
-### Float window
+### Float window and notifications
+Xdroid provides a convenient float window to start/stop the test process and users can access the window at everywhere on the device screen. What's more, Xdroid makes toasts with information and plays a ring tone to inform users to offer help.
 ![](images/floatwindow.png)
 
 ### Main function UI
+Xdroid implements a plain UI to configure the behavior of Xdroid and review test reports.
 ![](images/main.png)
 
 ## Experiment setup
